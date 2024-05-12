@@ -24,9 +24,15 @@ import logging
 import os
 import subprocess
 import sys
+from typing import TYPE_CHECKING, Optional, Union
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMessageBox
+
+
+if TYPE_CHECKING:
+    from logs import LogsW
+    from caleson import CalesonMainW
 
 
 _logger = logging.getLogger(__name__)
@@ -119,7 +125,7 @@ VERSION = "0.9.0"
 
 # Global variables
 global gGui
-gGui = None
+gGui: 'Optional[Union[CalesonMainW, LogsW]]' = None
 
 # Set TMP
 TMP = os.getenv("TMP")
@@ -160,7 +166,7 @@ else:
     PATH = PATH.split(os.pathsep)
 
 # Convert a ctypes c_char_p into a python string
-def cString(value):
+def cString(value: Union[str, bytes]) -> str:
     if not value:
         return ""
     if isinstance(value, str):
@@ -168,13 +174,14 @@ def cString(value):
     return value.decode("utf-8", errors="ignore")
 
 # Get Icon from user theme, using our own as backup (Oxygen)
-def getIcon(icon, size=16):
+def getIcon(icon, size=16) -> QIcon:
     return QIcon.fromTheme(icon, QIcon(":/%ix%i/%s.png" % (size, size, icon)))
 
 # Custom MessageBox
-def CustomMessageBox(self_, icon, title, text, extraText="",
+def CustomMessageBox(self_: 'CalesonMainW', icon: QIcon,
+                     title: str, text: str, extraText="",
                      buttons=QMessageBox.Yes|QMessageBox.No,
-                     defButton=QMessageBox.No):
+                     defButton=QMessageBox.No) -> QMessageBox:
     msgBox = QMessageBox(self_)
     msgBox.setIcon(icon)
     msgBox.setWindowTitle(title)
@@ -185,11 +192,11 @@ def CustomMessageBox(self_, icon, title, text, extraText="",
     return msgBox.exec_()
 
 # Signal handler
-def setUpSignals(self_):
+def setUpSignals(gui: 'Union[CalesonMainW, LogsW]'):
     global gGui
 
     if gGui is None:
-        gGui = self_
+        gGui = gui
 
     if not haveSignal:
         return

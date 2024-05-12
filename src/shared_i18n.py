@@ -20,7 +20,8 @@
 # ------------------------------------------------------------------------------------------------------------
 # Imports (Global)
 
-import os, sys
+import os
+import sys
 
 from PyQt5.QtCore import QCoreApplication, QTranslator, QLocale, QLibraryInfo
 
@@ -41,7 +42,9 @@ def setup_i18n():
     # Load translations from Qt libraries
     translator = QTranslator()
     if not translator.load(locale, "qt", "_", qmpath):
-        translator.load(locale, "qt", "_", QLibraryInfo.location(QLibraryInfo.TranslationsPath))
+        translator.load(
+            locale, "qt", "_",
+            QLibraryInfo.location(QLibraryInfo.TranslationsPath))
     app.installTranslator(translator)
     app.fSysTranslator = translator
 

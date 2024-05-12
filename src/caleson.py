@@ -31,14 +31,13 @@ import subprocess
 from PyQt5.QtCore import (
     QFileSystemWatcher, Qt, QTimer,
     pyqtSlot, pyqtSignal, QSettings)
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QCloseEvent
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow,  QMessageBox)
-from clickablelabel import ClickableLabel
-
 
 # Imports (Custom Stuff)
 
+from clickablelabel import ClickableLabel
 import force_restart
 import systray
 import pulse2jack_tool
@@ -304,7 +303,6 @@ class CalesonMainW(QMainWindow):
         
         # Not available in cxfreeze builds
         if sys.argv[0].endswith("/caleson"):
-            # self.ui.groupBox_bridges.setEnabled(False)
             self.ui.cb_jack_autostart.setEnabled(False)
 
         # -------------------------------------------------------------
@@ -365,46 +363,34 @@ class CalesonMainW(QMainWindow):
             self.systray.addAction("jack_configure", self.tr("Configure JACK"))
             self.systray.addSeparator("sep1")
 
-            self.systray.addMenu("alsa", self.tr("ALSA Audio Bridge"))
-            self.systray.addMenuAction("alsa", "alsa_start", self.tr("Start"))
-            self.systray.addMenuAction("alsa", "alsa_stop", self.tr("Stop"))
-            self.systray.addMenu("a2j", self.tr("ALSA MIDI Bridge"))
-            self.systray.addMenuAction("a2j", "a2j_start", self.tr("Start"))
-            self.systray.addMenuAction("a2j", "a2j_stop", self.tr("Stop"))
             self.systray.addMenu("pulse", self.tr("PulseAudio Bridge"))
             self.systray.addMenuAction("pulse", "pulse_start", self.tr("Start"))
             self.systray.addMenuAction("pulse", "pulse_stop", self.tr("Stop"))
+            self.systray.addMenu("a2j", self.tr("ALSA MIDI Bridge"))
+            self.systray.addMenuAction("a2j", "a2j_start", self.tr("Start"))
+            self.systray.addMenuAction("a2j", "a2j_stop", self.tr("Stop"))            
 
             self.systray.setActionIcon("jack_start", "media-playback-start")
             self.systray.setActionIcon("jack_stop", "media-playback-stop")
             self.systray.setActionIcon("jack_configure", "configure")
-            self.systray.setActionIcon("alsa_start", "media-playback-start")
-            self.systray.setActionIcon("alsa_stop", "media-playback-stop")
-            self.systray.setActionIcon("a2j_start", "media-playback-start")
-            self.systray.setActionIcon("a2j_stop", "media-playback-stop")
             self.systray.setActionIcon("pulse_start", "media-playback-start")
             self.systray.setActionIcon("pulse_stop", "media-playback-stop")
+            self.systray.setActionIcon("a2j_start", "media-playback-start")
+            self.systray.setActionIcon("a2j_stop", "media-playback-stop")
 
             self.systray.connect("jack_start", self.slot_JackServerStart)
             self.systray.connect("jack_stop", self.slot_JackServerStop)
             self.systray.connect("jack_configure", self.slot_JackServerConfigure)
-            self.systray.connect("alsa_start", self.slot_AlsaBridgeStart)
-            self.systray.connect("alsa_stop", self.slot_AlsaBridgeStop)
-            self.systray.connect("a2j_start", self.slot_A2JBridgeStart)
-            self.systray.connect("a2j_stop", self.slot_A2JBridgeStop)
             self.systray.connect("pulse_start", self.slot_PulseAudioBridgeStart)
             self.systray.connect("pulse_stop", self.slot_PulseAudioBridgeStop)
+            self.systray.connect("a2j_start", self.slot_A2JBridgeStart)
+            self.systray.connect("a2j_stop", self.slot_A2JBridgeStop)
 
-        self.systray.addMenu("tools", self.tr("Tools"))
-        self.systray.addMenuAction("tools", "app_catarina", "Catarina")
-        self.systray.addMenuAction("tools", "app_catia", "Catia")
-        self.systray.addMenuSeparator("tools", "tools_sep")
-        self.systray.addMenuAction("tools", "app_logs", self.tr("Logs"))
-        self.systray.addMenuAction("tools", "app_render", self.tr("Render"))
+        self.systray.addAction("app_logs", self.tr("Logs"))
+        self.systray.setActionIcon("app_logs", "text-x-log")
         self.systray.addSeparator("sep2")
 
         self.systray.connect("app_logs", self.func_start_logs)
-        self.systray.connect("app_render",  self.func_start_render)
 
         self.systray.setToolTip("Caleson")
         self.systray.show()
@@ -439,26 +425,40 @@ class CalesonMainW(QMainWindow):
 
         self.ui.b_tweaks_apply_now.clicked.connect(self.slot_tweaksApply)
 
-        self.ui.sb_wineasio_ins.valueChanged.connect(self.slot_tweaksSettingsChanged_wineasio)
-        self.ui.sb_wineasio_outs.valueChanged.connect(self.slot_tweaksSettingsChanged_wineasio)
-        self.ui.cb_wineasio_hw.clicked.connect(self.slot_tweaksSettingsChanged_wineasio)
-        self.ui.cb_wineasio_autostart.clicked.connect(self.slot_tweaksSettingsChanged_wineasio)
-        self.ui.cb_wineasio_fixed_bsize.clicked.connect(self.slot_tweaksSettingsChanged_wineasio)
-        self.ui.cb_wineasio_bsizes.currentIndexChanged[int].connect(self.slot_tweaksSettingsChanged_wineasio)
+        self.ui.sb_wineasio_ins.valueChanged.connect(
+            self.slot_tweaksSettingsChanged_wineasio)
+        self.ui.sb_wineasio_outs.valueChanged.connect(
+            self.slot_tweaksSettingsChanged_wineasio)
+        self.ui.cb_wineasio_hw.clicked.connect(
+            self.slot_tweaksSettingsChanged_wineasio)
+        self.ui.cb_wineasio_autostart.clicked.connect(
+            self.slot_tweaksSettingsChanged_wineasio)
+        self.ui.cb_wineasio_fixed_bsize.clicked.connect(
+            self.slot_tweaksSettingsChanged_wineasio)
+        self.ui.cb_wineasio_bsizes.currentIndexChanged[int].connect(
+            self.slot_tweaksSettingsChanged_wineasio)
 
         # org.jackaudio.JackControl
-        self.DBusJackServerStartedCallback.connect(self.slot_DBusJackServerStartedCallback)
-        self.DBusJackServerStoppedCallback.connect(self.slot_DBusJackServerStoppedCallback)
+        self.DBusJackServerStartedCallback.connect(
+            self.slot_DBusJackServerStartedCallback)
+        self.DBusJackServerStoppedCallback.connect(
+            self.slot_DBusJackServerStoppedCallback)
 
         # org.jackaudio.JackPatchbay
-        self.DBusJackClientAppearedCallback.connect(self.slot_DBusJackClientAppearedCallback)
-        self.DBusJackClientDisappearedCallback.connect(self.slot_DBusJackClientDisappearedCallback)
+        self.DBusJackClientAppearedCallback.connect(
+            self.slot_DBusJackClientAppearedCallback)
+        self.DBusJackClientDisappearedCallback.connect(
+            self.slot_DBusJackClientDisappearedCallback)
 
         # org.gna.home.a2jmidid.control
-        self.DBusA2JBridgeStartedCallback.connect(self.slot_DBusA2JBridgeStartedCallback)
-        self.DBusA2JBridgeStoppedCallback.connect(self.slot_DBusA2JBridgeStoppedCallback)
-        self.ui.cb_a2j_autoexport.stateChanged[int].connect(self.slot_A2JBridgeExportHW)
-        self.ui.cb_a2j_unique_port_names.stateChanged[int].connect(self.slot_A2JBridgeUniquePortNames)
+        self.DBusA2JBridgeStartedCallback.connect(
+            self.slot_DBusA2JBridgeStartedCallback)
+        self.DBusA2JBridgeStoppedCallback.connect(
+            self.slot_DBusA2JBridgeStoppedCallback)
+        self.ui.cb_a2j_autoexport.stateChanged[int].connect(
+            self.slot_A2JBridgeExportHW)
+        self.ui.cb_a2j_unique_port_names.stateChanged[int].connect(
+            self.slot_A2JBridgeUniquePortNames)
 
         # -------------------------------------------------------------
 
@@ -723,8 +723,6 @@ class CalesonMainW(QMainWindow):
             if isAlsaAudioBridged():
                 self.ui.b_alsa_start.setEnabled(False)
                 self.ui.b_alsa_stop.setEnabled(True)
-                self.systray.setActionEnabled("alsa_start", False)
-                self.systray.setActionEnabled("alsa_stop", True)
                 self.ui.label_bridge_alsa.setText(
                     self.tr("Using Caleson snd-aloop daemon, started"))
             else:
@@ -735,8 +733,6 @@ class CalesonMainW(QMainWindow):
 
                 self.ui.b_alsa_start.setEnabled(jackRunning)
                 self.ui.b_alsa_stop.setEnabled(False)
-                self.systray.setActionEnabled("alsa_start", jackRunning)
-                self.systray.setActionEnabled("alsa_stop", False)
                 self.ui.label_bridge_alsa.setText(
                     self.tr("Using Caleson snd-aloop daemon, stopped"))
 
@@ -746,8 +742,6 @@ class CalesonMainW(QMainWindow):
         elif asoundrcRead == ASOUNDRC_JACK:
             self.ui.b_alsa_start.setEnabled(False)
             self.ui.b_alsa_stop.setEnabled(False)
-            self.systray.setActionEnabled("alsa_start", False)
-            self.systray.setActionEnabled("alsa_stop", False)
             self.ui.cb_alsa_type.setCurrentIndex(AlsaFile.JACK.value)
             self.ui.tb_alsa_options.setEnabled(False)
             self.ui.label_bridge_alsa.setText(
@@ -756,8 +750,6 @@ class CalesonMainW(QMainWindow):
         elif asoundrcRead == ASOUNDRC_PULSE:
             self.ui.b_alsa_start.setEnabled(False)
             self.ui.b_alsa_stop.setEnabled(False)
-            self.systray.setActionEnabled("alsa_start", False)
-            self.systray.setActionEnabled("alsa_stop", False)
             self.ui.cb_alsa_type.setCurrentIndex(AlsaFile.PULSE.value)
             self.ui.tb_alsa_options.setEnabled(False)
             self.ui.label_bridge_alsa.setText(
@@ -766,8 +758,6 @@ class CalesonMainW(QMainWindow):
         else:
             self.ui.b_alsa_start.setEnabled(False)
             self.ui.b_alsa_stop.setEnabled(False)
-            self.systray.setActionEnabled("alsa_start", False)
-            self.systray.setActionEnabled("alsa_stop", False)
             self.ui.cb_alsa_type.addItem(self.tr("Custom"))
             self.ui.cb_alsa_type.setCurrentIndex(AlsaFile.MAX.value)
             self.ui.tb_alsa_options.setEnabled(True)
@@ -1331,7 +1321,7 @@ class CalesonMainW(QMainWindow):
 
         QMainWindow.timerEvent(self, event)
 
-    def closeEvent(self, event):
+    def closeEvent(self, event: QCloseEvent):
         self.saveSettings()
         self.systray.handleQtCloseEvent(event)
 
