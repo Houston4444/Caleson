@@ -51,11 +51,11 @@ UI: caleson tools
 
 caleson: src/ui_caleson.py \
 	src/ui_caleson_tb_alsa.py  \
-	src/ui_caleson_rwait.py src/ui_pulse_bridge.py
+	src/ui_caleson_rwait.py \
+	src/ui_pulse_bridge.py
 
 tools: \
 	src/ui_logs.py \
-	src/ui_settings_app.py \
 	src/ui_settings_jack.py
 
 src/ui_%.py: resources/ui/%.ui
