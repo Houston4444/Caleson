@@ -23,7 +23,8 @@ from sys import platform
 
 from PyQt5.QtCore import pyqtSlot, Qt, QSettings, QTimer
 from PyQt5.QtGui import QFontMetrics
-from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QMessageBox
+from PyQt5.QtWidgets import (
+    QDialog, QDialogButtonBox, QMessageBox, QComboBox)
 
 from shared_i18n import setup_i18n
 
@@ -734,8 +735,8 @@ class JackSettingsW(QDialog):
     # -----------------------------------------------------------------
     # Helper functions
 
-    def getAlsaDeviceList(self, playback=True):
-        alsaDeviceList = []
+    def getAlsaDeviceList(self, playback=True) -> list[str]:
+        alsaDeviceList = list[str]()
 
         executable = 'aplay' if playback else 'arecord'
 
@@ -757,9 +758,10 @@ class JackSettingsW(QDialog):
 
         return alsaDeviceList
 
-    def setComboBoxValue(self, box, text, split=False):
+    def setComboBoxValue(self, box: QComboBox, text: str, split=False):
         for i in range(box.count()):
-            if box.itemText(i) == text or (box.itemText(i).split(" ")[0] == text and split):
+            if (box.itemText(i) == text
+                    or (box.itemText(i).split(" ")[0] == text and split)):
                 box.setCurrentIndex(i)
                 break
         else:
@@ -773,11 +775,14 @@ class JackSettingsW(QDialog):
     @pyqtSlot(int)
     def slot_checkALSASelection(self, ignored=0):
         if self.fDriverName == "alsa":
-            check = bool(self.ui.obj_driver_duplex.isChecked() and (self.ui.obj_driver_capture.currentIndex() > 0 or self.ui.obj_driver_playback.currentIndex() > 0))
+            check = bool(
+                self.ui.obj_driver_duplex.isChecked()
+                and (self.ui.obj_driver_capture.currentIndex() > 0
+                     or self.ui.obj_driver_playback.currentIndex() > 0))
             self.ui.obj_driver_device.setEnabled(not check)
 
     @pyqtSlot(bool)
-    def slot_checkDuplexSelection(self, active):
+    def slot_checkDuplexSelection(self, active: bool):
         if driverHasFeature("duplex"):
             self.ui.obj_driver_capture.setEnabled(active)
             self.ui.obj_driver_capture_label.setEnabled(active)
@@ -791,14 +796,15 @@ class JackSettingsW(QDialog):
         self.slot_checkALSASelection()
 
     @pyqtSlot(int)
-    def slot_checkDriverSelection(self, row):
+    def slot_checkDriverSelection(self, row: int):
         global gJackctl
 
         # Save previous settings
         self.saveDriverSettings(False)
 
         # Set new Jack driver
-        self.fDriverName = dbus.String(self.ui.obj_server_driver.item(row, 0).text().lower())
+        self.fDriverName = dbus.String(
+            self.ui.obj_server_driver.item(row, 0).text().lower())
         gJackctl.SetParameterValue(["engine", "driver"], self.fDriverName)
 
         # Add device list
@@ -811,7 +817,8 @@ class JackSettingsW(QDialog):
             else:
                 dev_list = gJackctl.GetParameterConstraint(["driver", "device"])[3]
                 for i in range(len(dev_list)):
-                    self.ui.obj_driver_device.addItem(dev_list[i][0] + " [%s]" % str(dev_list[i][1]))
+                    self.ui.obj_driver_device.addItem(
+                        dev_list[i][0] + " [%s]" % str(dev_list[i][1]))
 
         # Custom 'playback' and 'capture' values
         self.ui.obj_driver_capture.clear()
@@ -831,8 +838,10 @@ class JackSettingsW(QDialog):
             else:
                 dev_list = gJackctl.GetParameterConstraint(["driver", "device"])[3]
                 for i in range(len(dev_list)):
-                    self.ui.obj_driver_capture.addItem(dev_list[i][0] + " [" + dev_list[i][1] + "]")
-                    self.ui.obj_driver_playback.addItem(dev_list[i][0] + " [" + dev_list[i][1] + "]")
+                    self.ui.obj_driver_capture.addItem(
+                        dev_list[i][0] + " [" + dev_list[i][1] + "]")
+                    self.ui.obj_driver_playback.addItem(
+                        dev_list[i][0] + " [" + dev_list[i][1] + "]")
 
         elif self.fDriverName == "dummy":
             for i in range(16):
@@ -884,8 +893,10 @@ class JackSettingsW(QDialog):
         self.ui.obj_driver_input_latency_label.setEnabled(driverHasFeature("input-latency"))
         self.ui.obj_driver_output_latency.setEnabled(driverHasFeature("output-latency"))
         self.ui.obj_driver_output_latency_label.setEnabled(driverHasFeature("output-latency"))
-        self.ui.obj_driver_midi_driver.setEnabled(driverHasFeature("midi") or driverHasFeature("midi-driver"))
-        self.ui.obj_driver_midi_driver_label.setEnabled(driverHasFeature("midi") or driverHasFeature("midi-driver"))
+        self.ui.obj_driver_midi_driver.setEnabled(
+            driverHasFeature("midi") or driverHasFeature("midi-driver"))
+        self.ui.obj_driver_midi_driver_label.setEnabled(
+            driverHasFeature("midi") or driverHasFeature("midi-driver"))
         self.ui.obj_driver_wait.setEnabled(driverHasFeature("wait"))
         self.ui.obj_driver_wait_label.setEnabled(driverHasFeature("wait"))
         self.ui.obj_driver_verbose.setEnabled(driverHasFeature("verbose"))
@@ -932,7 +943,9 @@ class JackSettingsW(QDialog):
 
     @pyqtSlot()
     def slot_closeWithError(self):
-        QMessageBox.critical(self, self.tr("Error"), self.tr("jackdbus is not available!\nIt's not possible to configure JACK at this point."))
+        QMessageBox.critical(
+            self, self.tr("Error"),
+            self.tr("jackdbus is not available!\nIt's not possible to configure JACK at this point."))
         self.close()
 
     def saveSettings(self):
@@ -943,7 +956,8 @@ class JackSettingsW(QDialog):
     def loadSettings(self):
         settings = QSettings("Caleson", "JackSettings")
         self.restoreGeometry(settings.value("Geometry", b""))
-        self.ui.tabWidget.setCurrentIndex(settings.value("CurrentTab", 0, type=int))
+        self.ui.tabWidget.setCurrentIndex(
+            settings.value("CurrentTab", 0, type=int))
 
     def closeEvent(self, event):
         self.saveSettings()
@@ -970,13 +984,20 @@ if __name__ == '__main__':
     # Connect to DBus
     if dbus:
         if initBus(dbus.SessionBus()):
-            QMessageBox.critical(None, app.translate("JackSettingsW", "Error"), app.translate("JackSettingsW",
-                "jackdbus is not available!\n"
-                "Is not possible to configure JACK at this point."))
+            QMessageBox.critical(
+                None,
+                app.translate("JackSettingsW", "Error"),
+                app.translate(
+                    "JackSettingsW",
+                    "jackdbus is not available!\n"
+                    "Is not possible to configure JACK at this point."))
             sys_exit(1)
     else:
-        QMessageBox.critical(None, app.translate("JackSettingsW", "Error"),
-            app.translate("JackSettingsW", "DBus is not available, cannot continue."))
+        QMessageBox.critical(
+            None,
+            app.translate("JackSettingsW", "Error"),
+            app.translate("JackSettingsW",
+                          "DBus is not available, cannot continue."))
         sys_exit(1)
 
     # Show GUI
