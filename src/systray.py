@@ -34,7 +34,7 @@ if TYPE_CHECKING:
 
 
 _logger = logging.getLogger(__name__)
-
+_translate = QApplication.translate
 
 # Get Icon from user theme, using our own as backup (Oxygen)
 def getIcon(icon, size=16):
@@ -172,15 +172,15 @@ class GlobalSysTray:
         self.close()
         QMainWindow.closeEvent(self._parent, event)
 
-    # -------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------
 
     def show(self):
         if not self._quit_added:
             self._quit_added = True
 
             self.addSeparator("_quit")
-            self.addAction("show", self._parent.tr("Hide"))
-            self.addAction("quit", self._parent.tr("Quit"))
+            self.addAction("show", _translate('systray', "Hide"))
+            self.addAction("quit", _translate('systray', "Quit"))
             self.setActionIcon("quit", "application-exit")
             self.connect("show", self.__hideShowCall)
             self.connect("quit", self.__quitCall)
