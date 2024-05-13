@@ -20,17 +20,15 @@ from shared import VERSION, HOME
 
 _logger = logging.getLogger(__name__)
 
-
-# Caleson Global Settings
 GlobalSettings = QSettings("Caleson", "GlobalSettings")
 
 # DBus
-class dBus(object):
-    __slots__ = [
-      'bus',
-      'a2j',
-      'jack'
-    ]
+class dBus:
+    bus : dbus.SessionBus = None
+    a2j: dbus.Interface = None
+    jack: dbus.Interface = None
+
+
 DBus = dBus()
 
 def forceReset():
@@ -54,7 +52,7 @@ def forceReset():
             os.remove(config)
 
 # Start JACK, A2J and Pulse, according to user settings
-def startSession(systemStarted, secondSystemStartAttempt) -> bool:
+def startSession(systemStarted: bool, secondSystemStartAttempt: bool) -> bool:
     # Check if JACK is set to auto-start
     if (systemStarted
             and not GlobalSettings.value(
@@ -91,7 +89,6 @@ def startSession(systemStarted, secondSystemStartAttempt) -> bool:
     except:
         DBus.a2j = None
 
-    
     try:
         startJack()
     except dbus.exceptions.DBusException as e:
@@ -202,5 +199,4 @@ if __name__ == '__main__':
     else:
         printError(cmd)
 
-    # Exit
     sys.exit(0)

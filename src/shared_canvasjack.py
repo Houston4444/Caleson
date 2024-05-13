@@ -20,8 +20,14 @@
 
 # Imports (Custom Stuff)
 import logging
+from typing import TYPE_CHECKING
+
 from shared import cString
 from jacklib_helpers import jacklib
+
+if TYPE_CHECKING:
+    import dbus
+
 
 _logger = logging.getLogger(__name__)
 
@@ -35,28 +41,18 @@ if jacklib and jacklib.JACK2:
 BUFFER_SIZE_LIST = (16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192)
 SAMPLE_RATE_LIST = (22050, 32000, 44100, 48000, 88200, 96000, 192000)
 
-# Global DBus object
-class DBusObject(object):
-    __slots__ = [
-        'loop',
-        'bus',
-        'a2j',
-        'jack',
-        'patchbay'
-    ]
+
+class DBusObject:
+    loop = None
+    bus: 'dbus.SessionBus' = None
+    a2j: 'dbus.Interface' = None
+    jack: 'dbus.Interface' = None
+    patchbay: 'dbus.Interface' = None
+
+
+class JackObject:
+    client = None
+
 
 gDBus = DBusObject()
-gDBus.loop = None
-gDBus.bus = None
-gDBus.a2j = None
-gDBus.jack = None
-gDBus.patchbay = None
-
-# Global JACK object
-class JackObject(object):
-    __slots__ = [
-        'client'
-    ]
-
 gJack = JackObject()
-gJack.client = None

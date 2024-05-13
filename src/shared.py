@@ -121,7 +121,7 @@ def sys_excepthook(typ, value, tback):
 sys.excepthook = sys_excepthook
 
 # Set Version
-VERSION = "0.9.0"
+VERSION = "0.10.0"
 
 # Global variables
 global gGui

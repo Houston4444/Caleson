@@ -59,6 +59,7 @@ from shared_canvasjack import (
 from shared_i18n import setup_i18n
 from system_checks import calesonSystemChecks, initSystemChecks
 import jacksettings
+import firewire_blacklist
 
 import ui_caleson
 
@@ -223,11 +224,10 @@ class CalesonMainW(QMainWindow):
                 self.slot_governorFileChanged)
             QTimer.singleShot(0, self.slot_governorFileChanged)
 
-            availGovFd = open(self.m_availGovPath, "r")
-            availGovRead = availGovFd.read().strip()
-            availGovFd.close()
+            with open(self.m_availGovPath, "r") as availGovFd:
+                availGovRead = availGovFd.read().strip()
 
-            self.m_availGovList = availGovRead.split(" ")
+            self.m_availGovList = availGovRead.split(' ')
             for availGov in self.m_availGovList:
                 self.ui.cb_cpufreq.addItem(availGov)
 
@@ -403,6 +403,8 @@ class CalesonMainW(QMainWindow):
         self.ui.b_jack_restart.clicked.connect(self.slot_JackServerForceRestart)
         self.ui.b_jack_configure.clicked.connect(self.slot_JackServerConfigure)
         self.ui.b_jack_switchmaster.clicked.connect(self.slot_JackServerSwitchMaster)
+        
+        self.ui.b_firewire_black.clicked.connect(self.slot_FirewireBlackManage)
 
         self.ui.b_alsa_start.clicked.connect(self.slot_AlsaBridgeStart)
         self.ui.b_alsa_stop.clicked.connect(self.slot_AlsaBridgeStop)
@@ -961,6 +963,11 @@ class CalesonMainW(QMainWindow):
             return
 
         self.jackStarted()
+
+    @pyqtSlot()
+    def slot_FirewireBlackManage(self):
+        dialog = firewire_blacklist.FirewireDialog(self)
+        dialog.exec()
 
     @pyqtSlot()
     def slot_JackClearXruns(self):
