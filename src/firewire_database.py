@@ -3,6 +3,8 @@
 # https://github.com/alsa-project/snd-firewire-ctl-services
 
 _DATABASE = """
+snd-isight-ctl-service
+    Apple iSight
 snd-firewire-digi00x-ctl-service
     Digi 002
     Digi 002 Rack

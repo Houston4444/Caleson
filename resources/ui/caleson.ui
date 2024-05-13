@@ -377,6 +377,9 @@
               <property name="text">
                <string>Manage FireWire interfaces</string>
               </property>
+              <property name="icon">
+               <iconset theme="hi64-apps-ffado"/>
+              </property>
              </widget>
             </item>
             <item>
@@ -2191,7 +2194,7 @@ Default is off</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>79</width>
+             <width>96</width>
              <height>46</height>
             </rect>
            </property>

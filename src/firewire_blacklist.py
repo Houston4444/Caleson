@@ -1,26 +1,26 @@
 
 
 import logging
-from pydoc import visiblename
 import tempfile
-import sys
-from pathlib import Path
+import subprocess
 
 from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import (
     QDialog, QLabel, QRadioButton, QButtonGroup,
-    QTableWidgetItem, QDialogButtonBox)
+    QTableWidgetItem, QDialogButtonBox,
+    QMessageBox, QApplication)
 
 from firewire_database import DRIVER_INTERFACES
 import ui_firewire
 
 _logger = logging.getLogger()
+_translate = QApplication.translate
 
 BLACK_FILE = '/etc/modprobe.d/snd-firewire-modules-blacklist-librazik.conf'
 
 # dict of drivers under the form {'driver_name': blacklisted}
 drivers = dict[str, bool]()
-      
+
 
 def update_from_black_file() -> bool:
     drivers.clear()
@@ -30,6 +30,10 @@ def update_from_black_file() -> bool:
             contents = f.read()
     except BaseException as e:
         _logger.error(f"Failed to read firewire blacklist: {str(e)}")
+
+        for driver in DRIVER_INTERFACES.keys():
+            drivers[driver] = False
+
         return False
     
     for line in contents.splitlines():
@@ -46,7 +50,7 @@ def update_from_black_file() -> bool:
     
     return True
 
-def get_new_blackfile_contents() -> str:
+def get_new_blackfile_contents(tmp_drivers: dict[str, bool]) -> str:
     '''returns the contents needed in BLACK_FILE
     to apply blacklists from the drivers dict'''
     try:
@@ -78,12 +82,14 @@ def get_new_blackfile_contents() -> str:
             new_lines.append(line)
             continue
         
-        if drivers[driver]:
+        if tmp_drivers[driver]:
             new_lines.append(f'blacklist {driver}')
         else:
             new_lines.append(f'#blacklist {driver}')
+
+        blacklist_done.add(driver)
             
-    for driver, blacklisted in drivers.items():
+    for driver, blacklisted in tmp_drivers.items():
         if not driver in blacklist_done:
             if blacklisted:
                 new_lines.append(f'blacklist {driver}')
@@ -92,9 +98,9 @@ def get_new_blackfile_contents() -> str:
     
     return '\n'.join(new_lines)
 
-def write_tmp_black_file(self) -> str:
+def write_tmp_black_file(tmp_drivers: dict[str, bool]) -> str:
     'write contents in a tmp file, and returns the tmp file path as str'
-    contents = get_new_blackfile_contents()
+    contents = get_new_blackfile_contents(tmp_drivers)
     if not contents:
         return ''
     
@@ -104,15 +110,11 @@ def write_tmp_black_file(self) -> str:
     return f.name
 
 
-
 class WidgetsLine:
-    has_changes = False
-    
     def __init__(self, dialog: 'FirewireDialog',
                  name: str, blacklisted: bool):
         self.dialog = dialog
         self.driver_name = name
-        self.label = QLabel(name)
         self.alsa_btn = QRadioButton()
         self.fw_btn = QRadioButton()
         self.btn_grp = QButtonGroup()
@@ -163,9 +165,42 @@ class FirewireDialog(QDialog):
             self._filter_bar_edited)
         
         self.set_apply_enabled(False)
+        self.ui.buttonBox.button(QDialogButtonBox.Apply).clicked.connect(
+            self.apply_changes)
     
     def set_apply_enabled(self, enabled: bool):
         self.ui.buttonBox.button(QDialogButtonBox.Apply).setEnabled(enabled)
+    
+    def apply_changes(self):
+        tmp_drivers = dict[str, bool]()
+        for widget_lines in self.widget_lines:
+            tmp_drivers[widget_lines.driver_name] = widget_lines.is_blacklisted()
+        
+        tmp_file = write_tmp_black_file(tmp_drivers)
+        if not tmp_file:
+            return
+        
+        process = subprocess.run(['pkexec', 'mv', '-f', tmp_file, BLACK_FILE])
+        if process.returncode:
+            if process.returncode != 127:
+                QMessageBox.critical(
+                    self,
+                    _translate('firewire_driver_chooser',
+                               "Operation failed"),
+                    _translate('firewire_driver_chooser',
+                               "Failed to apply changes, sorry"))
+            return
+        
+        update_from_black_file()
+        self.set_apply_enabled(False)
+        
+        QMessageBox.information(
+            self,
+            _translate('firewire_driver_chooser',
+                       'Operation completed'),
+            _translate('firewire_driver_chooser',
+                       'Changes have been applied to the system '
+                       'but they will be used at next computer startup.'))
     
     @pyqtSlot(bool)
     def driver_changed(self, state: bool):
@@ -234,14 +269,3 @@ class FirewireDialog(QDialog):
                 'QLineEdit{background:#40FF0000}')
             for row in range(self.ui.tableWidget.rowCount()):
                 self.ui.tableWidget.hideRow(row)
-
-
-if __name__ == '__main__':
-    update_from_black_file()
-    # for driver, blacklisted in drivers.items():
-    #     print('dv', driver, blacklisted)
-        
-    drivers['snd-firewire-tascam'] = False
-    drivers['snd-fireface'] = True
-    contents = get_new_blackfile_contents()
-    print(contents)

@@ -14,54 +14,54 @@
         <translation>Système</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="723"/>
+        <location filename="../resources/ui/caleson.ui" line="747"/>
         <source>Welcome to your Caleson !</source>
         <translation>Bienvenue dans ton Caleson !</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="420"/>
+        <location filename="../resources/ui/caleson.ui" line="444"/>
         <source>System Information</source>
         <translation>Informations du système</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="428"/>
+        <location filename="../resources/ui/caleson.ui" line="452"/>
         <source>Operating System:</source>
-        <translation>Système d'exploitation :</translation>
+        <translation>Système d&apos;exploitation :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="675"/>
+        <location filename="../resources/ui/caleson.ui" line="699"/>
         <source>TextLabel</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="496"/>
+        <location filename="../resources/ui/caleson.ui" line="520"/>
         <source>Kernel/Version:</source>
         <translation>Noyau/version :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="462"/>
+        <location filename="../resources/ui/caleson.ui" line="486"/>
         <source>Architecture:</source>
         <translation>Architecture :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="549"/>
+        <location filename="../resources/ui/caleson.ui" line="573"/>
         <source>CPU Scaling Governor:</source>
         <translation>Gouvernance processeur :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="574"/>
+        <location filename="../resources/ui/caleson.ui" line="598"/>
         <source>System Checks</source>
         <translation>Vérifications du système</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="820"/>
+        <location filename="../src/caleson.py" line="812"/>
         <source>JACK Status</source>
         <translation>Statut JACK</translation>
     </message>
     <message>
         <location filename="../resources/ui/caleson.ui" line="151"/>
         <source>Sample Rate:</source>
-        <translation>Taux d'échantillonnage :</translation>
+        <translation>Taux d&apos;échantillonnage :</translation>
     </message>
     <message>
         <location filename="../resources/ui/caleson.ui" line="199"/>
@@ -94,12 +94,12 @@
         <translation>Latence de bloc :</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="375"/>
+        <location filename="../src/caleson.py" line="370"/>
         <source>Start</source>
         <translation>Démarrer</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="376"/>
+        <location filename="../src/caleson.py" line="371"/>
         <source>Stop</source>
         <translation>Arrêter</translation>
     </message>
@@ -119,154 +119,154 @@
         <translation>Modifier à-la-volée</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2145"/>
+        <location filename="../resources/ui/caleson.ui" line="2168"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="734"/>
+        <location filename="../resources/ui/caleson.ui" line="758"/>
         <source>JACK Bridges</source>
         <translation>Ponts JACK</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2024"/>
+        <location filename="../resources/ui/caleson.ui" line="2047"/>
         <source>ALSA Audio</source>
         <translation>Audio ALSA</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="715"/>
+        <location filename="../src/caleson.py" line="717"/>
         <source>No bridge in use</source>
         <translation>Pas de pont en utilisation</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2111"/>
+        <location filename="../resources/ui/caleson.ui" line="2134"/>
         <source>Bridge Type:</source>
         <translation>Type de pont :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2122"/>
+        <location filename="../resources/ui/caleson.ui" line="2145"/>
         <source>(None)</source>
         <translation>(Aucun)</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2127"/>
+        <location filename="../resources/ui/caleson.ui" line="2150"/>
         <source>ALSA -&gt; Loop -&gt; JACK</source>
         <translation>ALSA -&gt; Boucle -&gt; JACK</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2132"/>
+        <location filename="../resources/ui/caleson.ui" line="2155"/>
         <source>ALSA -&gt; JACK (Plugin)</source>
         <translation>ALSA -&gt; JACK (greffon)</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2137"/>
+        <location filename="../resources/ui/caleson.ui" line="2160"/>
         <source>ALSA -&gt; PulseAudio -&gt; JACK (Plugin)</source>
         <translation>ALSA -&gt; PulseAudio -&gt; JACK (greffon)</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1271"/>
+        <location filename="../resources/ui/caleson.ui" line="1295"/>
         <source>ALSA MIDI State</source>
         <translation>État du MIDI ALSA</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1388"/>
+        <location filename="../resources/ui/caleson.ui" line="1412"/>
         <source>Export hardware ports</source>
         <translation>Exporter les ports matériels</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1405"/>
+        <location filename="../resources/ui/caleson.ui" line="1429"/>
         <source>Start with Jack</source>
         <translation>Démarrer avec Jack</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2006"/>
+        <location filename="../resources/ui/caleson.ui" line="2029"/>
         <source>PulseAudio</source>
         <translation>PulseAudio</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="946"/>
+        <location filename="../resources/ui/caleson.ui" line="970"/>
         <source>PulseAudio state</source>
         <translation>État de PulseAudio</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1211"/>
+        <location filename="../resources/ui/caleson.ui" line="1235"/>
         <source>Auto-start at login</source>
         <translation>Démarrage automatique à la connexion</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="398"/>
+        <location filename="../resources/ui/caleson.ui" line="1713"/>
         <source>Tools</source>
         <translation>Outils</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1703"/>
+        <location filename="../resources/ui/caleson.ui" line="1726"/>
         <source>Applications</source>
         <translation>Applications</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="402"/>
+        <location filename="../src/caleson.py" line="389"/>
         <source>Logs</source>
         <translation>Journaux</translation>
     </message>
     <message>
         <location filename="../src/caleson.py" line="403"/>
         <source>Render</source>
-        <translation>Rendu</translation>
+        <translation type="obsolete">Rendu</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1933"/>
+        <location filename="../resources/ui/caleson.ui" line="1956"/>
         <source>Render a JACK project</source>
-        <translation>Faire un rendu d'un projet JACK</translation>
+        <translation>Faire un rendu d&apos;un projet JACK</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="762"/>
+        <location filename="../resources/ui/caleson.ui" line="786"/>
         <source>Settings have been changed</source>
         <translation>Les paramètres ont été modifiés</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="785"/>
+        <location filename="../resources/ui/caleson.ui" line="809"/>
         <source>Apply Now</source>
         <translation>appliquer maintenant</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="859"/>
+        <location filename="../resources/ui/caleson.ui" line="883"/>
         <source>wineasio</source>
         <translation>wineasio</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="864"/>
+        <location filename="../resources/ui/caleson.ui" line="888"/>
         <source>name</source>
         <translation>nom</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="899"/>
+        <location filename="../resources/ui/caleson.ui" line="923"/>
         <source>WineASIO</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1474"/>
+        <location filename="../resources/ui/caleson.ui" line="1498"/>
         <source>Audio Ports</source>
         <translation>Ports audio</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1528"/>
+        <location filename="../resources/ui/caleson.ui" line="1552"/>
         <source>Number of jack ports that wineasio will try to open.
 Default is 16</source>
-        <translation>Nombre de ports JACK que WineAsio essaiera d'ouvrir.
+        <translation>Nombre de ports JACK que WineAsio essaiera d&apos;ouvrir.
 16 par défaut</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1486"/>
+        <location filename="../resources/ui/caleson.ui" line="1510"/>
         <source>Number of inputs:</source>
-        <translation>Nombre d'entrées :</translation>
+        <translation>Nombre d&apos;entrées :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1518"/>
+        <location filename="../resources/ui/caleson.ui" line="1542"/>
         <source>Number of outputs:</source>
         <translation>Nombre de sorties:</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1565"/>
+        <location filename="../resources/ui/caleson.ui" line="1589"/>
         <source>Try to connect the asio channels to the
 physical I/O ports on your hardware.
 Default is on</source>
@@ -275,136 +275,136 @@ aux entrées/sorties physiques de votre matériel.
 Activé par défaut</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1570"/>
+        <location filename="../resources/ui/caleson.ui" line="1594"/>
         <source>Connect to hardware</source>
         <translation>Connecter au matériel</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1582"/>
+        <location filename="../resources/ui/caleson.ui" line="1606"/>
         <source>JACK Options</source>
         <translation>Options JACK</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1606"/>
+        <location filename="../resources/ui/caleson.ui" line="1630"/>
         <source>Enable wineasio to launch the jack server.
 Default is off</source>
         <translation>Autoriser WineAsio à lancer le serveur JACK.
 Désactivé par défaut</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1610"/>
+        <location filename="../resources/ui/caleson.ui" line="1634"/>
         <source>Autostart server</source>
         <translation>Démarre automatiquement le serveur</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1637"/>
+        <location filename="../resources/ui/caleson.ui" line="1661"/>
         <source>When on, an asio app will be able to change the jack buffer size.
 Default is off</source>
         <translation>Si activé, une application ASIO sera capable de changer la taille du tampon de JACK.
 Désactivé par défaut</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1641"/>
+        <location filename="../resources/ui/caleson.ui" line="1665"/>
         <source>Fixed buffersize</source>
         <translation>Taille du tampon fixée</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1652"/>
+        <location filename="../resources/ui/caleson.ui" line="1676"/>
         <source>Preferred buffersize:</source>
         <translation>Taille du tampon préférée :</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="292"/>
+        <location filename="../src/caleson.py" line="291"/>
         <source>PulseAudio is not installed</source>
-        <translation>PulseAudio n'est pas installé</translation>
+        <translation>PulseAudio n&apos;est pas installé</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="363"/>
+        <location filename="../src/caleson.py" line="361"/>
         <source>Start JACK</source>
         <translation>Démarrer JACK</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="364"/>
+        <location filename="../src/caleson.py" line="362"/>
         <source>Stop JACK</source>
         <translation>Arrêter JACK</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="365"/>
+        <location filename="../src/caleson.py" line="363"/>
         <source>Configure JACK</source>
         <translation>Configurer JACK</translation>
     </message>
     <message>
         <location filename="../src/caleson.py" line="368"/>
         <source>ALSA Audio Bridge</source>
-        <translation>Pont ALSA Audio</translation>
+        <translation type="obsolete">Pont ALSA Audio</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="371"/>
+        <location filename="../src/caleson.py" line="369"/>
         <source>ALSA MIDI Bridge</source>
         <translation>Pont ALSA MIDI</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="374"/>
+        <location filename="../src/caleson.py" line="366"/>
         <source>PulseAudio Bridge</source>
         <translation>Pont PulseAudio</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="613"/>
+        <location filename="../src/caleson.py" line="615"/>
         <source>Yes</source>
         <translation>Oui</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="616"/>
+        <location filename="../src/caleson.py" line="618"/>
         <source>No</source>
         <translation>Non</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="523"/>
+        <location filename="../src/caleson.py" line="525"/>
         <source>Unavailable</source>
         <translation>Indisponible</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="525"/>
+        <location filename="../src/caleson.py" line="527"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="528"/>
+        <location filename="../src/caleson.py" line="530"/>
         <source>-- jackdbus is not available --</source>
-        <translation>-- jackdbus n'est pas disponible</translation>
+        <translation>-- jackdbus n&apos;est pas disponible</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="549"/>
+        <location filename="../src/caleson.py" line="551"/>
         <source>ALSA MIDI Bridge is not installed</source>
-        <translation>Le pont ALSA MIDI (a2j) n'est pas installé</translation>
+        <translation>Le pont ALSA MIDI (a2j) n&apos;est pas installé</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="609"/>
+        <location filename="../src/caleson.py" line="611"/>
         <source>Started</source>
         <translation>Démarré</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="1324"/>
+        <location filename="../src/caleson.py" line="1321"/>
         <source>%i samples</source>
         <translation>%i échantillons</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="667"/>
+        <location filename="../src/caleson.py" line="669"/>
         <source>Stopped</source>
         <translation>Arrêté</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="693"/>
+        <location filename="../src/caleson.py" line="695"/>
         <source>ALSA MIDI Bridge is running, ports are exported</source>
         <translation>Le pont ALSA MIDI est démarré, les ports sont exportés</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="696"/>
+        <location filename="../src/caleson.py" line="698"/>
         <source>ALSA MIDI Bridge is running</source>
         <translation>Le pont ALSA MIDI est démarré</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="705"/>
+        <location filename="../src/caleson.py" line="707"/>
         <source>ALSA MIDI Bridge is stopped</source>
         <translation>Le pont ALSA MIDI est arrêté</translation>
     </message>
@@ -414,107 +414,107 @@ Désactivé par défaut</translation>
         <translation>Utilisation du démon snd-aloop Caleson, démarré</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="740"/>
+        <location filename="../src/caleson.py" line="738"/>
         <source>Using Caleson snd-aloop daemon, stopped</source>
         <translation>Utilisation du démon snd-aloop Caleson, arrêté</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="753"/>
+        <location filename="../src/caleson.py" line="749"/>
         <source>Using JACK plugin bridge (Always on)</source>
         <translation>Utilisation du pont de greffons JACK (toujours activé)</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="763"/>
+        <location filename="../src/caleson.py" line="757"/>
         <source>Using PulseAudio plugin bridge (Always on)</source>
         <translation>Utilisation du pont de greffon PulseAudio (toujours activé)</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="1204"/>
+        <location filename="../src/caleson.py" line="1201"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="774"/>
+        <location filename="../src/caleson.py" line="766"/>
         <source>Using custom asoundrc, not managed by Caleson</source>
-        <translation>Utilisation d'un asoundrc personnalisé, non géré par Caleson</translation>
+        <translation>Utilisation d&apos;un asoundrc personnalisé, non géré par Caleson</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="802"/>
+        <location filename="../src/caleson.py" line="794"/>
         <source>PulseAudio is started but not bridged</source>
         <translation>PulseAudio est démarré mais non-ponté</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="812"/>
+        <location filename="../src/caleson.py" line="804"/>
         <source>PulseAudio is not started</source>
-        <translation>PulseAudio n'est pas démarré</translation>
+        <translation>PulseAudio n&apos;est pas démarré</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="821"/>
+        <location filename="../src/caleson.py" line="813"/>
         <source>Realtime</source>
         <translation>Temps réel</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="822"/>
+        <location filename="../src/caleson.py" line="814"/>
         <source>DSP Load</source>
         <translation>Charge DSP</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="823"/>
+        <location filename="../src/caleson.py" line="815"/>
         <source>Xruns</source>
         <translation>Décrochage(s) (x-runs)</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="824"/>
+        <location filename="../src/caleson.py" line="816"/>
         <source>Buffer Size</source>
         <translation>Taille du tampon</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="825"/>
+        <location filename="../src/caleson.py" line="817"/>
         <source>Sample Rate</source>
-        <translation>Taux d'échantillonnage</translation>
+        <translation>Taux d&apos;échantillonnage</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="826"/>
+        <location filename="../src/caleson.py" line="818"/>
         <source>Block Latency</source>
         <translation>Latence de bloc</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="1004"/>
+        <location filename="../src/caleson.py" line="1001"/>
         <source>Warning</source>
         <translation>Attention</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="917"/>
+        <location filename="../src/caleson.py" line="909"/>
         <source>Failed to start JACK, please check the logs for more information.</source>
-        <translation>N'a pas pu démarrer JACK, veuillez vérifier les journaux pour davantage d'informations.</translation>
+        <translation>N&apos;a pas pu démarrer JACK, veuillez vérifier les journaux pour davantage d&apos;informations.</translation>
+    </message>
+    <message>
+        <location filename="../src/caleson.py" line="921"/>
+        <source>Failed to stop JACK, please check the logs for more information.</source>
+        <translation>N&apos;a pas pu arrêter JACK, veuillez vérifier les journaux pour davantage d&apos;informations.</translation>
     </message>
     <message>
         <location filename="../src/caleson.py" line="929"/>
-        <source>Failed to stop JACK, please check the logs for more information.</source>
-        <translation>N'a pas pu arrêter JACK, veuillez vérifier les journaux pour davantage d'informations.</translation>
-    </message>
-    <message>
-        <location filename="../src/caleson.py" line="937"/>
         <source>This will force kill all JACK applications!&lt;br&gt;Make sure to save your projects before continue.</source>
-        <translation>Ceci forcera à tuer toutes les applications JACK !&lt;br&gt;Assurez-vous d'avoir sauvegardé vos projets avant de continuer.</translation>
+        <translation>Ceci forcera à tuer toutes les applications JACK !&lt;br&gt;Assurez-vous d&apos;avoir sauvegardé vos projets avant de continuer.</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="937"/>
+        <location filename="../src/caleson.py" line="929"/>
         <source>Are you sure you want to force the restart of JACK?</source>
         <translation>Étes-vous certain de vouloir forcer un redémarrage de JACK ?</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="967"/>
+        <location filename="../src/caleson.py" line="959"/>
         <source>Failed to switch JACK master, please check the logs for more information.</source>
-        <translation>'a pas pu modifier JACK à-la-volée, veuillez vérifier les journaux pour davantage d'informations.</translation>
+        <translation>&apos;a pas pu modifier JACK à-la-volée, veuillez vérifier les journaux pour davantage d&apos;informations.</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="1004"/>
+        <location filename="../src/caleson.py" line="1001"/>
         <source>You&apos;re using a custom ~/.asoundrc file not managed by Caleson.&lt;br/&gt;By choosing to use a Caleson ALSA-Audio bridge, &lt;b&gt;the file will be replaced&lt;/b&gt;.</source>
-        <translation>Vous utilisez actuellement un fichier ~/.asoundrc personnalisé non-géré par Caleson.&lt;br/&gt;En choisissant d'utiliser le pont ALSA-Audio Caleson, &lt;b&gt;le fichier sera remplacé&lt;/b&gt;.</translation>
+        <translation>Vous utilisez actuellement un fichier ~/.asoundrc personnalisé non-géré par Caleson.&lt;br/&gt;En choisissant d&apos;utiliser le pont ALSA-Audio Caleson, &lt;b&gt;le fichier sera remplacé&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="1004"/>
+        <location filename="../src/caleson.py" line="1001"/>
         <source>Are you sure you want to do this?</source>
         <translation>Êtes-vous certain de vouloir faire ceci ?</translation>
     </message>
@@ -524,104 +524,109 @@ Désactivé par défaut</translation>
         <translation>Démarrer automatiquement JACK à la connexion</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1886"/>
+        <location filename="../resources/ui/caleson.ui" line="1909"/>
         <source>View JACK and A2J logs</source>
         <translation>Voir les journaux de JACK et de A2J</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="614"/>
+        <location filename="../resources/ui/caleson.ui" line="638"/>
         <source>User in audio group :</source>
         <translation>Utilisateur dans le groupe audio :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="637"/>
+        <location filename="../resources/ui/caleson.ui" line="661"/>
         <source>Used kernel :</source>
         <translation>Noyau utilisé :</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1000"/>
+        <location filename="../resources/ui/caleson.ui" line="1024"/>
         <source>Add Source</source>
         <translation>Ajouter une entrée</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1070"/>
+        <location filename="../resources/ui/caleson.ui" line="1094"/>
         <source>Add Sink</source>
         <translation>Ajouter une sortie</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1124"/>
+        <location filename="../resources/ui/caleson.ui" line="1148"/>
         <source>Apply</source>
         <translation>Appliquer</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2176"/>
+        <location filename="../resources/ui/caleson.ui" line="2199"/>
         <source>ALSA MIDI (A2J)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="794"/>
+        <location filename="../src/caleson.py" line="786"/>
         <source>PulseAudio is started and bridged to JACK</source>
         <translation>PulseAudio est démarré et ponté à JACK</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2250"/>
+        <location filename="../resources/ui/caleson.ui" line="2273"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="804"/>
+        <location filename="../src/caleson.py" line="796"/>
         <source>PulseAudio is started but JACK is stopped</source>
         <translation>PulseAudio est démarré mais JACK est arrêté</translation>
     </message>
     <message>
-        <location filename="../src/caleson.py" line="814"/>
+        <location filename="../src/caleson.py" line="806"/>
         <source>PulseAudio is not started, nor is JACK</source>
-        <translation>PulseAudio n'est pas démarré, JACK non plus</translation>
+        <translation>PulseAudio n&apos;est pas démarré, JACK non plus</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1395"/>
+        <location filename="../resources/ui/caleson.ui" line="1419"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;if checked, the JACK port names provided by the bridge contains their matching ALSA client ID. Check it only if you use simultaneously multiple identical MIDI devices.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si cochée, les noms des ports JACK fournis par le pont contiendront leur identifiant de client ALSA correspondant. Ne cochez cette case que si vous utilisez simultanément plusieurs périphériques MIDI identiques.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1398"/>
+        <location filename="../resources/ui/caleson.ui" line="1422"/>
         <source>Unique port names</source>
         <translation>Noms de ports uniques</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1728"/>
+        <location filename="../resources/ui/caleson.ui" line="1751"/>
         <source>Patchance</source>
         <translation>Patchance</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1759"/>
+        <location filename="../resources/ui/caleson.ui" line="1782"/>
         <source>JACK Patchbay with A2J Bridge, Alsa MIDI and JACK Transport</source>
         <translation>Baie de brassage pour JACK, avec support A2J, ALSA MIDI et JACK transport</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1775"/>
+        <location filename="../resources/ui/caleson.ui" line="1798"/>
         <source>RaySession</source>
         <translation>RaySession</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1806"/>
+        <location filename="../resources/ui/caleson.ui" line="1829"/>
         <source>Session Manager with NSM support</source>
         <translation>Gestionnaire de sessions avec support NSM</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1902"/>
+        <location filename="../resources/ui/caleson.ui" line="1925"/>
         <source>QJackCapture</source>
         <translation>QJackCapture</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="1965"/>
+        <location filename="../resources/ui/caleson.ui" line="1988"/>
         <source>merdouille</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson.ui" line="2293"/>
+        <location filename="../resources/ui/caleson.ui" line="2316"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Caleson&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;LibraZiK version&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Caleson is a tool used to configure the JACK server, and commonly needed bridges for PulseAudio or ALSA MIDI.&lt;/p&gt;&lt;p&gt;This version is specific to LibraZiK.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) falkTX 2010 - 2021&lt;/p&gt;&lt;p&gt;Copyright (C) houston4444 2022 - 2024&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;French translation: 2022 - 2024 Olivier Humbert trebmuh@tuxfamily.org&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Caleson&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;LibraZiK version&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Caleson est un outil qui sert à configurer le serveur JACK, ainsi que les ponts généralement requis pour PulseAudio et ALSA MIDI.&lt;/p&gt;&lt;p&gt;Cette version est spécifique à  LibraZiK.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) falkTX 2010 - 2021&lt;/p&gt;&lt;p&gt;Copyright (C) houston4444 2022 - 2024&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Traduction française: 2022 - 2024 Olivier Humbert trebmuh@tuxfamily.org&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/caleson.ui" line="378"/>
+        <source>Manage FireWire interfaces</source>
+        <translation>Gestion des interfaces FireWire</translation>
     </message>
 </context>
 <context>
@@ -695,17 +700,17 @@ Désactivé par défaut</translation>
     <message>
         <location filename="../src/system_checks.py" line="117"/>
         <source> Vanilla (PAE)</source>
-        <translation type="unfinished"> Vanilla (PAE)</translation>
+        <translation> Vanilla (PAE)</translation>
     </message>
     <message>
         <location filename="../src/system_checks.py" line="120"/>
         <source> Vanilla</source>
-        <translation type="unfinished"> Vanilla</translation>
+        <translation> Vanilla</translation>
     </message>
     <message>
         <location filename="../src/system_checks.py" line="123"/>
         <source>No realtime options for this version of kernel.</source>
-        <translation>Pas d'options temps réel pour cette version du noyau.</translation>
+        <translation>Pas d&apos;options temps réel pour cette version du noyau.</translation>
     </message>
 </context>
 <context>
@@ -751,9 +756,59 @@ Désactivé par défaut</translation>
         <translation>alsa_in/out</translation>
     </message>
     <message>
-        <location filename="../resources/ui/caleson_rwait.ui" line="40"/>
+        <location filename="../resources/ui/firewire.ui" line="102"/>
         <source>TextLabel</source>
         <translation>Étiquette</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/firewire.ui" line="14"/>
+        <source>FireWire driver selector</source>
+        <translation>Sélecteur de pilote FireWire</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/firewire.ui" line="20"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Some Firewire interfaces have ALSA driver.&lt;br/&gt;Sometimes, it is preferable to force system to use FFADO driver instead,&lt;br/&gt;mainly for audio performance reasons.&lt;/p&gt;&lt;p&gt;In this window, you can choose which driver you want to disable for ALSA.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certaines interfaces FireWire ont un pilote ALSA.&lt;br/&gt;Quelques fois, il est préférable de forcer le système à utiliser le pilote FFADO à la place,&lt;br/&gt;principalement pour des raisons de performance audio.&lt;/p&gt;&lt;p&gt;Dans cette fenêtre, vous pouvez choisir quel pilote désactiver dans ALSA.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/firewire.ui" line="33"/>
+        <source>Search your interface here</source>
+        <translation>Cherchez votre carte son ici</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/firewire.ui" line="58"/>
+        <source>Driver</source>
+        <translation>Pilote</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/firewire.ui" line="63"/>
+        <source>FFADO</source>
+        <translation>FFADO</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/firewire.ui" line="71"/>
+        <source>ALSA</source>
+        <translation>ALSA</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/firewire.ui" line="112"/>
+        <source>Known interfaces for this driver :</source>
+        <translation>Interfaces connues pour ce pilote :</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/sudo_dialog.ui" line="14"/>
+        <source>Permission required</source>
+        <translation>Permission requise</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/sudo_dialog.ui" line="33"/>
+        <source>Root password is needed for this action.</source>
+        <translation>Le mot de passe Administrateur est requis pour cette action</translation>
+    </message>
+    <message>
+        <location filename="../resources/ui/sudo_dialog.ui" line="43"/>
+        <source>Password</source>
+        <translation>Mot de passe</translation>
     </message>
 </context>
 <context>
@@ -867,7 +922,7 @@ Désactivé par défaut</translation>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="54"/>
         <source>Whether to use realtime scheduling</source>
-        <translation>Utilisation (ou pas) de l'ordonnancement temps réel</translation>
+        <translation>Utilisation (ou pas) de l&apos;ordonnancement temps réel</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="57"/>
@@ -897,7 +952,7 @@ Désactivé par défaut</translation>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="84"/>
         <source>Use system port aliases instead of system:playback_*</source>
-        <translation>Utilise le système d'alias de port à la place de system:playback_*</translation>
+        <translation>Utilise le système d&apos;alias de port à la place de system:playback_*</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="87"/>
@@ -907,7 +962,7 @@ Désactivé par défaut</translation>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="111"/>
         <source>Scheduler priority when running in realtime mode</source>
-        <translation>Priorité de l'ordonnanceur lors du mode temps réel</translation>
+        <translation>Priorité de l&apos;ordonnanceur lors du mode temps réel</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="101"/>
@@ -1017,27 +1072,27 @@ Désactivé par défaut</translation>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="293"/>
         <source>Don&apos;t restrict self connect requests</source>
-        <translation>Ne pas restreindre les requêtes d'auto-connexion</translation>
+        <translation>Ne pas restreindre les requêtes d&apos;auto-connexion</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="300"/>
         <source>Fail self connect requests to external ports only</source>
-        <translation>Rejete les requêtes d'auto-connexion vers des ports externes uniquement</translation>
+        <translation>Rejete les requêtes d&apos;auto-connexion vers des ports externes uniquement</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="307"/>
         <source>Ignore self connect requests to external ports only</source>
-        <translation>Ignore uniquement les requêtes d'auto-connexion vers des ports externes</translation>
+        <translation>Ignore uniquement les requêtes d&apos;auto-connexion vers des ports externes</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="314"/>
         <source>Fail all self connect requests</source>
-        <translation>Rejeter toutes les requêtes d'auto-connexion</translation>
+        <translation>Rejeter toutes les requêtes d&apos;auto-connexion</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="321"/>
         <source>Ignore all self connect requests</source>
-        <translation>Ignorer toutes les requêtes d'auto-connexion</translation>
+        <translation>Ignorer toutes les requêtes d&apos;auto-connexion</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="347"/>
@@ -1102,7 +1157,7 @@ Désactivé par défaut</translation>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="634"/>
         <source>Hardware device/interface name to use</source>
-        <translation>Nom de l'interface (ou périphérique) matériel à utiliser</translation>
+        <translation>Nom de l&apos;interface (ou périphérique) matériel à utiliser</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="621"/>
@@ -1123,13 +1178,13 @@ Désactivé par défaut</translation>
         <location filename="../resources/ui/settings_jack.ui" line="734"/>
         <source>Whether to provide input/capture ports.
 On ALSA you can here set an alternate device for capture</source>
-        <translation>Fournir, ou pas, des ports d'entrée/capture.
+        <translation>Fournir, ou pas, des ports d&apos;entrée/capture.
 Avec ALSA, vous pouvez paramétrer ici un périphérique alternatif pour la capture</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="900"/>
+        <location filename="../src/jacksettings.py" line="911"/>
         <source>Input Device:</source>
-        <translation>Périphérique d'entrée :</translation>
+        <translation>Périphérique d&apos;entrée :</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="684"/>
@@ -1139,7 +1194,7 @@ On ALSA you can here set an alternate device for playback</source>
 Avec ALSA, vous pouvez paramétrer ici un périphérique alternatif pour la lecture</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="901"/>
+        <location filename="../src/jacksettings.py" line="912"/>
         <source>Output Device:</source>
         <translation>Périphérique de sortie :</translation>
     </message>
@@ -1161,7 +1216,7 @@ Avec ALSA, vous pouvez paramétrer ici un périphérique alternatif pour la lect
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="770"/>
         <source>Input Channels:</source>
-        <translation>Canaux d'entrée :</translation>
+        <translation>Canaux d&apos;entrée :</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="661"/>
@@ -1196,7 +1251,7 @@ Avec ALSA, vous pouvez paramétrer ici un périphérique alternatif pour la lect
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="605"/>
         <source>Use hardware device name for alias instead of alsa_pcm</source>
-        <translation>Utilise le nom du périphérique matériel pour l'alias plutôt que alsa_pcm</translation>
+        <translation>Utilise le nom du périphérique matériel pour l&apos;alias plutôt que alsa_pcm</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="608"/>
@@ -1206,12 +1261,12 @@ Avec ALSA, vous pouvez paramétrer ici un périphérique alternatif pour la lect
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="814"/>
         <source>Sample rate in frames per second</source>
-        <translation>Taux d'échantillonnage en trames par seconde</translation>
+        <translation>Taux d&apos;échantillonnage en trames par seconde</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="801"/>
         <source>Sample Rate:</source>
-        <translation>Taux d'échantillonnage :</translation>
+        <translation>Taux d&apos;échantillonnage :</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="821"/>
@@ -1348,7 +1403,7 @@ Also known as buffer size</source>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="1112"/>
         <source>Extra input latency (frames)</source>
-        <translation>Latence supplémentaire d'entrée (trames)</translation>
+        <translation>Latence supplémentaire d&apos;entrée (trames)</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="1144"/>
@@ -1411,53 +1466,53 @@ Also known as buffer size</source>
         <translation>Ports de loopback maximum :</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="905"/>
+        <location filename="../src/jacksettings.py" line="916"/>
         <source>Input Ports:</source>
-        <translation>Ports d'entrée :</translation>
+        <translation>Ports d&apos;entrée :</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="906"/>
+        <location filename="../src/jacksettings.py" line="917"/>
         <source>Output Ports:</source>
         <translation>Ports de sortie :</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="910"/>
+        <location filename="../src/jacksettings.py" line="921"/>
         <source>Capture Ports:</source>
         <translation>Ports de capture :</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="911"/>
+        <location filename="../src/jacksettings.py" line="922"/>
         <source>Playback Ports:</source>
         <translation>Ports de lecture :</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="978"/>
+        <location filename="../src/jacksettings.py" line="996"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="935"/>
+        <location filename="../src/jacksettings.py" line="946"/>
         <source>jackdbus is not available!
 It&apos;s not possible to configure JACK at this point.</source>
-        <translation>jackdbus n'est pas disponible !
-Il n'est pas possible de configurer JACK à ce stade.</translation>
+        <translation>jackdbus n&apos;est pas disponible !
+Il n&apos;est pas possible de configurer JACK à ce stade.</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="973"/>
+        <location filename="../src/jacksettings.py" line="987"/>
         <source>jackdbus is not available!
 Is not possible to configure JACK at this point.</source>
-        <translation>jackdbus n'est pas disponible !
-Il n'est pas possible de configurer JACK à ce stade.</translation>
+        <translation>jackdbus n&apos;est pas disponible !
+Il n&apos;est pas possible de configurer JACK à ce stade.</translation>
     </message>
     <message>
-        <location filename="../src/jacksettings.py" line="978"/>
+        <location filename="../src/jacksettings.py" line="996"/>
         <source>DBus is not available, cannot continue.</source>
-        <translation>DBus n'est pas disponible, ne peut pas continuer.</translation>
+        <translation>DBus n&apos;est pas disponible, ne peut pas continuer.</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="1099"/>
         <source>Input Latency :</source>
-        <translation>Latence d'entrée :</translation>
+        <translation>Latence d&apos;entrée :</translation>
     </message>
     <message>
         <location filename="../resources/ui/settings_jack.ui" line="1147"/>
@@ -1514,9 +1569,32 @@ Il n'est pas possible de configurer JACK à ce stade.</translation>
     </message>
 </context>
 <context>
+    <name>firewire_driver_chooser</name>
+    <message>
+        <location filename="../src/firewire_blacklist.py" line="184"/>
+        <source>Operation failed</source>
+        <translation>Échec de l&apos;opération</translation>
+    </message>
+    <message>
+        <location filename="../src/firewire_blacklist.py" line="184"/>
+        <source>Failed to apply changes, sorry</source>
+        <translation>Échec de l&apos;application des changements, désolé</translation>
+    </message>
+    <message>
+        <location filename="../src/firewire_blacklist.py" line="195"/>
+        <source>Operation completed</source>
+        <translation>Opération terminée</translation>
+    </message>
+    <message>
+        <location filename="../src/firewire_blacklist.py" line="195"/>
+        <source>Changes have been applied to the system but they will be used at next computer startup.</source>
+        <translation>Les changements ont été appliqués au système mais un redémarrage de l&apos;ordinateur est requis pour qu&apos;ils prennent effet.</translation>
+    </message>
+</context>
+<context>
     <name>gui</name>
     <message>
-        <location filename="../src/caleson.py" line="1363"/>
+        <location filename="../src/caleson.py" line="1360"/>
         <source>Restore</source>
         <translation>Rétablir</translation>
     </message>
@@ -1524,19 +1602,32 @@ Il n'est pas possible de configurer JACK à ce stade.</translation>
 <context>
     <name>self._parent</name>
     <message>
-        <location filename="../src/systray.py" line="259"/>
+        <location filename="../src/systray.py" line="249"/>
         <source>Minimize</source>
         <translation>Minimiser</translation>
     </message>
     <message>
         <location filename="../src/systray.py" line="193"/>
         <source>Quit</source>
-        <translation>Quitter</translation>
+        <translation type="obsolete">Quitter</translation>
     </message>
     <message>
-        <location filename="../src/systray.py" line="252"/>
+        <location filename="../src/systray.py" line="242"/>
         <source>Restore</source>
         <translation>Rétablir</translation>
+    </message>
+</context>
+<context>
+    <name>systray</name>
+    <message>
+        <location filename="../src/systray.py" line="182"/>
+        <source>Hide</source>
+        <translation>Cacher</translation>
+    </message>
+    <message>
+        <location filename="../src/systray.py" line="183"/>
+        <source>Quit</source>
+        <translation>Quitter</translation>
     </message>
 </context>
 </TS>
